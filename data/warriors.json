@@ -1,0 +1,447 @@
+{
+  "styleGuard": "Modern Japanese sumi-e / ink-wash illustration style: bold, minimal, high-contrast with a muted limited color palette and generous negative space, matching the existing Sanada Yukimura and Date Masamune cards. A single warrior as the clear focal point, highly readable. WIDE 16:9 horizontal landscape composition — compose the subject for horizontal framing, not a square. no ukiyo-e woodblock density, no busy or cluttered background, no manga cel-shading, no pastel, no sun rays, no rising sun flag. CRITICAL — absolutely NO text of any kind anywhere in the image: no banners bearing kanji, no vertical title cards (tanzaku/短冊), no seals, no signature or artist marks. Do NOT display any family crest (kamon) unless it is explicitly specified as historically correct for this specific warrior in the concept below; when in doubt, omit all crests entirely.",
+  "_scoreTableNote": "fullRoster は診断エンジン用の20武将×6軸の【唯一の正式スコア表】(single source of truth)。axisScores は 0-9。マッチングは『平均中心化コサイン類似度』で最類似武将を判定（生コサインは全武将が中〜高得点で方向が似通い分離不能=最悪0.9922 になったため却下。全20体の平均ベクトルを各武将ベクトルとユーザー回答ベクトルの双方から引いてからコサインを取ると最悪0.865まで改善）。2026-07-03 CEO一任・COO神崎判断で確定。council(K.S/健太/CFO K.M)検証済み。策謀渋滞/宴過疎/官兵衛×隆景被りの3欠陥を修正済み。200武将拡張時はこの配列に追記する。詳細は同フォルダ『武将診断_6軸診断エンジン設計書.md』参照。",
+  "fullRoster": [
+    {
+      "id": "01",
+      "displayName": "真田幸村",
+      "status": "done",
+      "mainAxis": "動",
+      "axisScores": {
+        "動": 9,
+        "静": 2,
+        "策謀": 5,
+        "宴": 2,
+        "斜陽": 7,
+        "象徴": 9
+      }
+    },
+    {
+      "id": "02",
+      "displayName": "伊達政宗",
+      "status": "done",
+      "mainAxis": "象徴",
+      "axisScores": {
+        "動": 6,
+        "静": 7,
+        "策謀": 7,
+        "宴": 4,
+        "斜陽": 4,
+        "象徴": 9
+      }
+    },
+    {
+      "id": "03",
+      "displayName": "明智光秀",
+      "status": "done",
+      "mainAxis": "斜陽",
+      "axisScores": {
+        "動": 4,
+        "静": 6,
+        "策謀": 7,
+        "宴": 2,
+        "斜陽": 9,
+        "象徴": 6
+      }
+    },
+    {
+      "id": "04",
+      "displayName": "黒田官兵衛",
+      "status": "done",
+      "mainAxis": "策謀",
+      "axisScores": {
+        "動": 3,
+        "静": 7,
+        "策謀": 9,
+        "宴": 2,
+        "斜陽": 3,
+        "象徴": 6
+      }
+    },
+    {
+      "id": "05",
+      "displayName": "織田信長",
+      "status": "done",
+      "mainAxis": "象徴",
+      "axisScores": {
+        "動": 8,
+        "静": 5,
+        "策謀": 7,
+        "宴": 4,
+        "斜陽": 3,
+        "象徴": 9
+      }
+    },
+    {
+      "id": "06",
+      "displayName": "徳川家康",
+      "status": "done",
+      "mainAxis": "静",
+      "axisScores": {
+        "動": 3,
+        "静": 9,
+        "策謀": 7,
+        "宴": 3,
+        "斜陽": 2,
+        "象徴": 7
+      }
+    },
+    {
+      "id": "07",
+      "displayName": "豊臣秀吉",
+      "status": "done",
+      "mainAxis": "宴",
+      "axisScores": {
+        "動": 6,
+        "静": 3,
+        "策謀": 7,
+        "宴": 9,
+        "斜陽": 2,
+        "象徴": 7
+      }
+    },
+    {
+      "id": "08",
+      "displayName": "武田信玄",
+      "status": "done",
+      "mainAxis": "静",
+      "axisScores": {
+        "動": 6,
+        "静": 8,
+        "策謀": 7,
+        "宴": 3,
+        "斜陽": 3,
+        "象徴": 8
+      }
+    },
+    {
+      "id": "09",
+      "displayName": "上杉謙信",
+      "status": "week2",
+      "mainAxis": "象徴",
+      "axisScores": {
+        "動": 7,
+        "静": 6,
+        "策謀": 5,
+        "宴": 1,
+        "斜陽": 3,
+        "象徴": 8
+      }
+    },
+    {
+      "id": "10",
+      "displayName": "石田三成",
+      "status": "week2",
+      "mainAxis": "策謀",
+      "axisScores": {
+        "動": 3,
+        "静": 5,
+        "策謀": 9,
+        "宴": 2,
+        "斜陽": 8,
+        "象徴": 5
+      }
+    },
+    {
+      "id": "11",
+      "displayName": "本多忠勝",
+      "status": "week2",
+      "mainAxis": "動",
+      "axisScores": {
+        "動": 9,
+        "静": 2,
+        "策謀": 2,
+        "宴": 1,
+        "斜陽": 1,
+        "象徴": 7
+      }
+    },
+    {
+      "id": "12",
+      "displayName": "立花宗茂",
+      "status": "week2",
+      "mainAxis": "斜陽",
+      "axisScores": {
+        "動": 7,
+        "静": 4,
+        "策謀": 3,
+        "宴": 2,
+        "斜陽": 6,
+        "象徴": 6
+      }
+    },
+    {
+      "id": "13",
+      "displayName": "直江兼続",
+      "status": "week3",
+      "mainAxis": "策謀",
+      "axisScores": {
+        "動": 4,
+        "静": 7,
+        "策謀": 9,
+        "宴": 3,
+        "斜陽": 5,
+        "象徴": 8
+      }
+    },
+    {
+      "id": "14",
+      "displayName": "真田信之",
+      "status": "week3",
+      "mainAxis": "静",
+      "axisScores": {
+        "動": 4,
+        "静": 8,
+        "策謀": 6,
+        "宴": 4,
+        "斜陽": 4,
+        "象徴": 5
+      }
+    },
+    {
+      "id": "15",
+      "displayName": "小早川隆景",
+      "status": "week3",
+      "mainAxis": "策謀",
+      "axisScores": {
+        "動": 4,
+        "静": 8,
+        "策謀": 8,
+        "宴": 5,
+        "斜陽": 4,
+        "象徴": 6
+      }
+    },
+    {
+      "id": "16",
+      "displayName": "松永久秀",
+      "status": "done_via_test",
+      "mainAxis": "象徴",
+      "axisScores": {
+        "動": 6,
+        "静": 4,
+        "策謀": 9,
+        "宴": 2,
+        "斜陽": 8,
+        "象徴": 9
+      }
+    },
+    {
+      "id": "17",
+      "displayName": "島津義久",
+      "status": "week4",
+      "mainAxis": "策謀",
+      "axisScores": {
+        "動": 7,
+        "静": 6,
+        "策謀": 7,
+        "宴": 2,
+        "斜陽": 5,
+        "象徴": 7
+      }
+    },
+    {
+      "id": "18",
+      "displayName": "伊達輝宗",
+      "status": "week4",
+      "mainAxis": "斜陽",
+      "axisScores": {
+        "動": 3,
+        "静": 7,
+        "策謀": 5,
+        "宴": 3,
+        "斜陽": 9,
+        "象徴": 5
+      }
+    },
+    {
+      "id": "19",
+      "displayName": "山中鹿介",
+      "status": "week4",
+      "mainAxis": "斜陽",
+      "axisScores": {
+        "動": 7,
+        "静": 4,
+        "策謀": 4,
+        "宴": 1,
+        "斜陽": 9,
+        "象徴": 8
+      }
+    },
+    {
+      "id": "20",
+      "displayName": "前田利家",
+      "status": "week4",
+      "mainAxis": "宴",
+      "axisScores": {
+        "動": 6,
+        "静": 5,
+        "策謀": 4,
+        "宴": 7,
+        "斜陽": 3,
+        "象徴": 7
+      }
+    }
+  ],
+  "week1_redo": [
+    {
+      "id": "03",
+      "name": "akechi_mitsuhide",
+      "displayName": "明智光秀",
+      "category": "信念・斜陽型（軸5）",
+      "sceneTag": "honnoji_kesshin",
+      "concept": "明智光秀。織田信長の重臣にして、本能寺の変で主君を討った知将。教養高く律儀だが、重圧と忠義の板挟みに苦悩した人物。本能寺の変の夜、遠景に燃え盛る本能寺の炎、月光の下で前傾に佇む光秀。逡巡と決意の入り混じった悲壮な表情。物語性を重視し、炎と夜の静寂の対比で悲劇性を表現する。Reminder: no text, no title cards, no seals anywhere. Do NOT render any kamon with characters; suggest his identity only through the burning temple in the distance and a subtle bellflower (kikyo) motif if needed."
+    },
+    {
+      "id": "04",
+      "name": "kuroda_kanbei",
+      "displayName": "黒田官兵衛",
+      "category": "会議・策謀型（軸3）",
+      "sceneTag": "gunshi_saku",
+      "concept": "黒田官兵衛（黒田孝高）。稀代の軍師。豊臣秀吉の天下取りを陰で支えた知略の人。冷静沈着で、戦わずして勝つ策を得意とした。陣中、蝋燭の灯りのもと広げた地図と軍配を前に策を巡らせる官兵衛。椀形（釣鐘型）の兜。理知的で読みの深い眼差し。物語性を重視し、静かな陣幕・蝋燭・地図で軍師の知略を描く。Reminder: no text, no title cards, no seals. Do NOT render any kamon; convey the strategist through the map, war-fan (gunbai), and candlelight only."
+    },
+    {
+      "id": "05",
+      "name": "oda_nobunaga",
+      "displayName": "織田信長",
+      "category": "象徴的瞬間型（軸6）",
+      "sceneTag": "atsumori",
+      "concept": "織田信長。'天下布武'を掲げた革新の覇王。桶狭間の合戦前夜、敦盛を舞う信長——『人間五十年、下天のうちを比ぶれば夢幻の如くなり』。扇を手に一心に舞う姿。決死の覚悟と静かな狂気を宿す。背景は薄明の陣所。物語性を重視し、舞と夜明け前の緊張感で象徴的瞬間を描く。Reminder: no text, no title cards, no seals. Do NOT render any kamon; express him through the dance with a folding fan (ogi) and the pre-dawn atmosphere only."
+    },
+    {
+      "id": "06",
+      "name": "tokugawa_ieyasu",
+      "displayName": "徳川家康",
+      "category": "静の極限型（軸2）",
+      "sceneTag": "tenka_taihei",
+      "concept": "徳川家康。忍耐の末に天下を掴んだ江戸幕府の開祖。『鳴くまで待とうホトトギス』に象徴される大局観と忍耐力。高台から、築かれゆく城下町と広大な天下を静かに望む晩年の家康。落ち着いた威厳と忍耐の表情。物語性を重視し、俯瞰する城下と静かな佇まいで'待つ者の勝利'を描く。IMPORTANT: 公家風の烏帽子ではなく、武家の羽織・具足（甲冑）をまとった恰幅ある戦国大名・天下人として描く。Reminder: no text, no title cards, no seals. Do NOT render any kamon; convey him through the commanding view of the castle town and his composed, patient bearing only."
+    },
+    {
+      "id": "07",
+      "name": "toyotomi_hideyoshi",
+      "displayName": "豊臣秀吉",
+      "category": "人たらし・宴型（軸4）",
+      "sceneTag": "taikou_saihai",
+      "concept": "豊臣秀吉。農民から天下人へ成り上がった稀代の'人たらし'。人心を掌握する天性の魅力と、天下を統べる威厳を併せ持つ。陣中で陣羽織をまとい采配（軍配）を手に、千成瓢箪の馬印を背にして将兵（シルエット）を前に朗らかに鼓舞する秀吉。人を惹きつける笑みと大将の貫禄を両立。物語性を重視し、人たらしの温かさと天下人の風格を同居させる。IMPORTANT: 宴の軽い酔客ではなく、陣羽織・采配・馬印で明確に武将・天下人として描く。Reminder: no text, no title cards, no seals. Do NOT render any kamon; suggest identity through the gourd (hyotan) horse-standard shape and commander's baton (saihai) only."
+    },
+    {
+      "id": "08",
+      "name": "takeda_shingen",
+      "displayName": "武田信玄",
+      "category": "静・象徴型（軸2/軸6）",
+      "sceneTag": "shingenzutsumi",
+      "concept": "武田信玄。'甲斐の虎'。戦国最強の一角にして、暴れ川を治めた治水事業'信玄堤'を築いた内政の名君でもある。釜無川の氾濫を治めた壮大な信玄堤（堤防）と、その奥に護られた田畑・甲斐の山並みを背景に、完成した堤を見つめ泰然と構える信玄。軍配を手にする。物語性を重視し、荒ぶる川を治めた治水の偉業と、民を護る名君の器を描く。IMPORTANT: 公家風の烏帽子や細身の若武者ではなく、法師頭巾（剃髪後の姿）と豊かな髭をたくわえた恰幅ある戦国大名として描く。Reminder: no text, no title cards, no seals, and absolutely NO characters on any banner. Do NOT render any kamon."
+    }
+  ],
+  "week2": [
+    {
+      "id": "09",
+      "name": "uesugi_kenshin",
+      "displayName": "上杉謙信",
+      "category": "忍耐×長期視点型（拡張）",
+      "sceneTag": "gunshin_seiza",
+      "concept": "上杉謙信。'越後の龍'・軍神と称された義将。川中島の戦いで信玄と幾度も対峙。毘沙門天を篤く信仰し、私利私欲より義を重んじた。雪山を背景に、静かに瞑想する謙信。厳格で澄んだ眼差し。Express his Bishamonten faith ONLY through a faint statue/silhouette of Bishamonten in the background and his spear (yari) — do NOT use any flag or banner with kanji. Reminder: no text, no banners, no title cards, no seals anywhere."
+    },
+    {
+      "id": "10",
+      "name": "ishida_mitsunari",
+      "displayName": "石田三成",
+      "category": "策謀・忠義型（拡張）",
+      "sceneTag": "sekigahara_chuugi",
+      "concept": "石田三成。秀吉子飼いの官僚型武将。関ヶ原で西軍を率い、最後まで秀吉への忠義を貫いた。戦場を見渡す本陣、地図を前に策を練る三成。理知的で悲壮感漂う表情。Focus on the warrior, the map, and the battlefield vista. IMPORTANT: do NOT draw any war banners, camp curtains, or flags bearing a family crest — his correct crest is uncertain to render, so omit ALL crests and kamon. No text or title cards of any kind."
+    },
+    {
+      "id": "11",
+      "name": "honda_tadakatsu",
+      "displayName": "本多忠勝",
+      "category": "一点突破×集中型",
+      "sceneTag": "shogai_mukizu",
+      "concept": "本多忠勝。徳川四天王・生涯無傷の鬼武者。57回の合戦で一度も傷を負わなかったと伝わる。鹿角脇立の兜、蜻蛉切の槍を構える忠勝。絶対不敗の気迫。Reminder: no vertical title card (tanzaku), no text, no seals, no signature marks anywhere. Omit family crests."
+    },
+    {
+      "id": "12",
+      "name": "tachibana_muneshige",
+      "displayName": "立花宗茂",
+      "category": "一点突破×集中型",
+      "sceneTag": "saikyoku_fukkatsu",
+      "concept": "立花宗茂。'西国無双'。関ヶ原で改易されるも20年後に大名として返り咲いた唯一の武将。荒れ果てた旧領を見つめ再起を誓う宗茂。不屈の意志を宿す眼。Reminder: no vertical title card (tanzaku), no text, no seals, no signature marks anywhere. Omit family crests."
+    }
+  ],
+  "week3": [
+    {
+      "id": "13",
+      "displayName": "直江兼続",
+      "name": "naoe_kanetsugu",
+      "category": "策謀・象徴型（軸3/軸6）",
+      "sceneTag": "chie_no_sho",
+      "concept": "直江兼続。上杉家の名宰相にして、義と智を兼ね備えた知将。主君・上杉景勝を支え、徳川家康に一歩も引かず気骨の書状「直江状」を突きつけた。陣中で静かに筆を執り書状をしたためる、あるいは傍らに兜を置き思索する姿。理知と気概の同居。物語性を重視し、灯火と書状で知将の気骨を描く。IMPORTANT: 兜の前立ての『愛』の文字は絶対に描かない（文字は一切禁止。象徴は書状と静かな佇まいのみで示す）。 Reminder: no text of any kind, no title cards (tanzaku), no seals, no signature marks, and no kanji on any banner or helmet crest. Do NOT render any family crest (kamon); convey identity only through the scene and props described."
+    },
+    {
+      "id": "14",
+      "displayName": "真田信之",
+      "name": "sanada_nobuyuki",
+      "category": "静・忍耐型（軸2）",
+      "sceneTag": "matsushiro_bannen",
+      "concept": "真田信之。真田昌幸の長男、幸村の兄。派手な弟とは対照的に、徳川方につき忍耐と堅実さで真田の家名を江戸時代まで守り抜いた長寿の名君。老いてなお矍鑠とした晩年、静かに松代の城下と領地を見つめる。落ち着いた威厳と、家を守り抜いた者の深い眼差し。物語性を重視し、俯瞰する城下と静謐な佇まいで『守り抜いた者の強さ』を描く。 Reminder: no text of any kind, no title cards (tanzaku), no seals, no signature marks, and no kanji on any banner or helmet crest. Do NOT render any family crest (kamon); convey identity only through the scene and props described."
+    },
+    {
+      "id": "15",
+      "displayName": "小早川隆景",
+      "name": "kobayakawa_takakage",
+      "category": "策謀・宴型（軸3/軸4）",
+      "sceneTag": "ryosen_gaiko",
+      "concept": "小早川隆景。毛利元就の三男、毛利両川の一角。深い思慮と卓越した外交手腕で毛利家を支えた名参謀。人望篤く諸将から慕われた。瀬戸内の海と水軍を遠景に、穏やかだが芯のある表情で海を望み策を練る、あるいは諸将と語らう姿。温和さと知略の同居。物語性を重視し、瀬戸内の海と落ち着いた佇まいで『人望ある智将』を描く。 Reminder: no text of any kind, no title cards (tanzaku), no seals, no signature marks, and no kanji on any banner or helmet crest. Do NOT render any family crest (kamon); convey identity only through the scene and props described."
+    }
+  ],
+  "week4": [
+    {
+      "id": "17",
+      "displayName": "島津義久",
+      "name": "shimazu_yoshihisa",
+      "category": "策謀・動型（軸3/軸1）",
+      "sceneTag": "kyushu_seiha",
+      "concept": "島津義久。島津四兄弟の長兄にして、九州をほぼ制覇した薩摩の太守。巧みな戦略『釣り野伏せ』で大軍を破った。弟たちを束ねる器と南国薩摩の気風を備える。桜島を遠景に、泰然と九州の地を睥睨する大将の姿。威厳と統率力。物語性を重視し、桜島と堂々たる佇まいで『南国の覇者』を描く。 Reminder: no text of any kind, no title cards (tanzaku), no seals, no signature marks, and no kanji on any banner or helmet crest. Do NOT render any family crest (kamon); convey identity only through the scene and props described."
+    },
+    {
+      "id": "18",
+      "displayName": "伊達輝宗",
+      "name": "date_terumune",
+      "category": "信念・斜陽型（軸5）",
+      "sceneTag": "shakuyo_kakugo",
+      "concept": "伊達輝宗。伊達政宗の父。家督を政宗に譲った直後、敵将に拉致され、我が身もろとも討てと息子に命じた悲劇の武将。夕暮れの奥州の山野を背に、覚悟を秘めた父の横顔。息子の未来に全てを託す静かな決意と悲壮。物語性を重視し、斜陽（沈む夕日）と孤影で悲劇性と父の覚悟を描く。IMPORTANT: 公家風ではなく武家の装いで、恰幅ある戦国武将として描く。 Reminder: no text of any kind, no title cards (tanzaku), no seals, no signature marks, and no kanji on any banner or helmet crest. Do NOT render any family crest (kamon); convey identity only through the scene and props described."
+    },
+    {
+      "id": "19",
+      "displayName": "山中鹿介",
+      "name": "yamanaka_shikanosuke",
+      "category": "信念・斜陽型（軸5）",
+      "sceneTag": "mikazuki_inori",
+      "concept": "山中鹿介（山中幸盛）。滅びた主家・尼子家の再興に生涯を捧げた忠義の士。『願わくば我に七難八苦を与えたまえ』と三日月に祈った逸話で名高い。夜の荒野、三日月を仰ぎ祈る鹿介。不屈の意志と孤高の忠義。鹿の角を模した兜（鹿角脇立）が特徴。物語性を重視し、三日月と孤影で『苦難を望んだ忠臣』の悲壮な信念を描く。 Reminder: no text of any kind, no title cards (tanzaku), no seals, no signature marks, and no kanji on any banner or helmet crest. Do NOT render any family crest (kamon); convey identity only through the scene and props described."
+    },
+    {
+      "id": "20",
+      "displayName": "前田利家",
+      "name": "maeda_toshiie",
+      "category": "人たらし・宴型（軸4）",
+      "sceneTag": "kaga_bushin",
+      "concept": "前田利家。『槍の又左』と呼ばれた猛将にして、豊臣秀吉の無二の盟友。律儀で人望篤く、加賀百万石の礎を築いた。長槍を携えた武人の風格と、人を惹きつける温かな器を併せ持つ。加賀の地を背に、槍を手に泰然と立つ、あるいは諸将と杯を交わす姿。武と人望の同居。物語性を重視し、堂々たる武人の佇まいと温かみで『盟友に選ばれた男』を描く。 Reminder: no text of any kind, no title cards (tanzaku), no seals, no signature marks, and no kanji on any banner or helmet crest. Do NOT render any family crest (kamon); convey identity only through the scene and props described."
+    }
+  ],
+  "droppedFromV01": [
+    "織田信忠",
+    "斎藤道三",
+    "北条氏康",
+    "毛利元就",
+    "可児才蔵"
+  ],
+  "redo_16": [
+    {
+      "id": "16",
+      "displayName": "松永久秀",
+      "name": "matsunaga_hisahide",
+      "category": "策謀・象徴型（軸3/軸6）",
+      "sceneTag": "sandai_akugyaku",
+      "concept": "松永久秀。将軍殺し・主家乗っ取り・大仏焼き討ちの三悪と称された戦国の梟雄にして、茶の湯を愛した数寄者。織田信長への謀反の末、名器の茶釜『平蜘蛛』を渡すことを拒み、居城もろとも爆死したと伝わる。夜の城内、燃え上がる炎を背に、蜘蛛の形をした名器・平蜘蛛の茶釜を両腕に抱え、不敵かつ泰然と前を見据える恰幅ある武将。梟雄の凄みと、美を最期まで手放さなかった数寄者の矜持を同居させる。物語性を重視し、炎と抱えた茶釜で『己を貫いた悪の華の最期』を描く。IMPORTANT: 浮世絵木版画（ukiyo-e woodblock）調には絶対にしない。あくまで水墨・墨絵のミニマルで大胆な筆致、余白を活かす。Reminder: no text of any kind, no title cards (tanzaku/短冊), no vertical title strips, no seals (落款/朱印), no signature marks, and no kanji anywhere. Do NOT render any family crest (kamon); convey identity only through the flames and the spider-shaped tea kettle (Hiragumo)."
+    }
+  ]
+}
