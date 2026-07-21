@@ -7,7 +7,8 @@ import { trackEvent } from '@/lib/track.mjs';
 // 結果カードを canvas 生成 → モバイル:Web Share API(画像付き) / PC:ダウンロード。
 // カード面は販促ゼロ（武将+型+ハンドル/URL）＝健太ゲート。
 // 墨絵武将画像が public/images/warriors/{id}.jpg にあればそれを描画、無ければ従来の兜シルエットにフォールバック。
-// QRは実際に踏める result URL（+UTM）を指す。短縮URL /r/{id} 実装後にそちらへ差し替え予定。
+// QRは短縮URL /r/{id} を指す（2026-07-21）。/r 側で 302→/result/{id}?utm... へ流し、
+// カード経由流入をサーバーで1回計上。QR文字列が短くなりドット密度が下がる＝実機スキャン成功率UP。
 const CARD_W = 1080;
 const CARD_H = 1350; // IGフィード 4:5
 const IMG_X = 140, IMG_Y = 240, IMG_W = CARD_W - 280, IMG_H = 620;
@@ -24,8 +25,8 @@ function loadImage(src: string): Promise<HTMLImageElement | null> {
 export default function ShareCard({ name, typeName, id }: { name: string; typeName: string; id: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [busy, setBusy] = useState(false);
-  const displayUrl = `bushou-shindan.com/result/${id}`;
-  const qrTargetUrl = `https://bushou-shindan.com/result/${id}?utm_source=card&utm_medium=share`;
+  const displayUrl = `bushou-shindan.com/r/${id}`;
+  const qrTargetUrl = `https://bushou-shindan.com/r/${id}`;
 
   async function draw(): Promise<Blob> {
     const warriorImg = await loadImage(`/images/warriors/${id}.jpg`);
