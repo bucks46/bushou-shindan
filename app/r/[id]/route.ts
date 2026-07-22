@@ -40,5 +40,8 @@ export function GET(req: NextRequest, { params }: { params: { id: string } }) {
   dest.searchParams.set('utm_source', 'card');
   dest.searchParams.set('utm_medium', 'share');
   dest.searchParams.set('utm_campaign', 'busho_card');
+  // 武将別の拡散数を分離計測（2026-07-22 岬UTM体系化MTG 論点B）。
+  // /r は既にidを持つため1行で付与＝ShareCard改修・命名体系変更なし（藤堂監査を待たず可）。
+  dest.searchParams.set('utm_content', `warrior_${id}`);
   return NextResponse.redirect(dest, 302);
 }
