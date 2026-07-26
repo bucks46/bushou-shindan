@@ -52,11 +52,18 @@ export default function ShareCard({ name, typeName, id }: { name: string; typeNa
 
       if (warriorImg) {
         // 墨絵武将画像（cover-fit・角丸なしでミニマルに）
+        // 元画像は正方形が多く、IMG_W x IMG_H(横長寄り)の枠に中央クロップすると
+        // 兜・旗・掲げた得物など画面上部のモチーフが欠けやすいため、OGP側と同じ
+        // 上寄せ比率(TOP_BIAS)で、縦方向の余剰クロップは下部(地面・砂塵)から多く削る。
+        const TOP_BIAS = 0.35; // 0.5=中央/小さいほど上部を残す
         g.save();
         g.beginPath(); g.rect(IMG_X, IMG_Y, IMG_W, IMG_H); g.clip();
         const scale = Math.max(IMG_W / warriorImg.width, IMG_H / warriorImg.height);
         const dw = warriorImg.width * scale, dh = warriorImg.height * scale;
-        g.drawImage(warriorImg, IMG_X + (IMG_W - dw) / 2, IMG_Y + (IMG_H - dh) / 2, dw, dh);
+        const dx = IMG_X + (IMG_W - dw) / 2;
+        const excessH = Math.max(0, dh - IMG_H);
+        const dy = IMG_Y - excessH * TOP_BIAS;
+        g.drawImage(warriorImg, dx, dy, dw, dh);
         g.restore();
       } else {
         // 墨ブロック＋兜シルエット（プレースホルダ・フォールバック）

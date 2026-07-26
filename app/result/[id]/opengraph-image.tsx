@@ -18,16 +18,36 @@ export default async function Image({ params }: { params: { id: string } }) {
   const warrior = getById(params.id);
   const typeName = warrior ? describe(warrior).typeName : '';
 
-  // 元画像(1024x1024・最大2MB弱)をそのままbase64埋め込みすると、画像によって
-  // Satori(next/og)側の処理が不安定になり500エラーになる個体があったため、
-  // OGP表示に十分な解像度まで縮小・再圧縮してから埋め込む（品川Tier3チェックで検出）。
+  // 元画像をそのままbase64埋め込みすると、画像によってSatori(next/og)側の処理が
+  // 不安定になり500エラーになる個体があったため、OGP表示に十分な解像度まで
+  // 縮小・再圧縮してから埋め込む（品川Tier3チェックで検出）。
+  // クロップはSatori側のobjectFit任せ(中央固定)でなく、sharpで事前に1200x630へ
+  // 上寄せクロップする。元画像は正方形が多く、中央クロップだと兜・旗・掲げた得物
+  // など画面上部のモチーフが欠けやすいため、下部(地面・砂塵)側から多く削る。
   let imageSrc: string | null = null;
   if (warrior) {
     const imagePath = path.join(process.cwd(), 'public', 'images', 'warriors', `${warrior.id}.jpg`);
     if (fs.existsSync(imagePath)) {
       const buf = fs.readFileSync(imagePath);
-      const resized = await sharp(buf).resize(800, 800, { fit: 'cover' }).jpeg({ quality: 78 }).toBuffer();
-      imageSrc = `data:image/jpeg;base64,${resized.toString('base64')}`;
+      const TARGET_W = 1200;
+      const TARGET_H = 630;
+      const TOP_BIAS = 0.35; // 縦方向の余剰クロップのうち上から削る割合（0.5=中央/小さいほど上部を残す）
+      const meta = await sharp(buf).metadata();
+      const srcW = meta.width ?? TARGET_W;
+      const srcH = meta.height ?? TARGET_H;
+      const scale = Math.max(TARGET_W / srcW, TARGET_H / srcH);
+      const scaledW = Math.round(srcW * scale);
+      const scaledH = Math.round(srcH * scale);
+      const excessW = scaledW - TARGET_W;
+      const excessH = scaledH - TARGET_H;
+      const left = Math.max(0, Math.min(excessW, Math.round(excessW / 2)));
+      const top = Math.max(0, Math.min(excessH, Math.round(excessH * TOP_BIAS)));
+      const cropped = await sharp(buf)
+        .resize(scaledW, scaledH)
+        .extract({ left, top, width: TARGET_W, height: TARGET_H })
+        .jpeg({ quality: 78 })
+        .toBuffer();
+      imageSrc = `data:image/jpeg;base64,${cropped.toString('base64')}`;
     }
   }
 
