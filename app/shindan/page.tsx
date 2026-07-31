@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { QUESTIONS, SILHOUETTE_REVEAL_FROM } from '@/lib/questions.mjs';
 import { runDiagnose, runProvisional } from '@/lib/appRoster.mjs';
+import { trackEvent } from '@/lib/track.mjs';
 
 export default function Shindan() {
   const router = useRouter();
@@ -24,6 +25,8 @@ export default function Shindan() {
     const next = [...answers];
     next[current] = optIndex;
     setAnswers(next);
+    // 離脱ポイント計測（2026-07-31 藤堂設計→橘実装）：何問目まで到達したかをKVに記録
+    trackEvent('question_answered', { q: current, optIndex });
 
     if (current < QUESTIONS.length - 1) {
       setTimeout(() => setCurrent(current + 1), 180);

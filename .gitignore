@@ -9,3 +9,4 @@ data/events.log
 .DS_Store
 
 .vercel
+.env*

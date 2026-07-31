@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getById } from '@/lib/appRoster.mjs';
+import { logEvent } from '@/lib/kvEvents';
 
 // 短縮リダイレクタ /r/{id}（2026-07-21 実装・最小1本）
 // 目的：QRエンコード文字列を短くしドット密度を下げる＝実機スキャン成功率UP。
@@ -9,17 +10,13 @@ import { getById } from '@/lib/appRoster.mjs';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic'; // 302を毎回サーバーで返す（キャッシュ焼き付き＝計測漏れ防止）
 
-// ※ app/api/track/route.ts と同形式。将来共通化候補（7/26監査の棚卸し対象）。
+// 2026-07-31：console.logからKV(Upstash for Redis)集約へ移行。/n/{id}と共通のlogEventを使用。
 function recordServerEvent(name: string, props: Record<string, unknown>, req: NextRequest) {
-  const line = JSON.stringify({
-    name,
-    props,
-    ts: Date.now(),
+  void logEvent(name, {
+    ...props,
     ip: req.headers.get('x-forwarded-for') || 'local',
     ua: req.headers.get('user-agent')?.slice(0, 120) || '',
-    at: new Date().toISOString(),
   });
-  console.log('[EVENT]', line); // 本番=Vercel Function Logs / dev=標準出力
 }
 
 export function GET(req: NextRequest, { params }: { params: { id: string } }) {
