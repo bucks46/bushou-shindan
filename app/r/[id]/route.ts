@@ -19,8 +19,9 @@ function recordServerEvent(name: string, props: Record<string, unknown>, req: Ne
   });
 }
 
-export function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  const raw = params.id ?? '';
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id: rawId } = await params;
+  const raw = rawId ?? '';
   const id = raw.padStart(2, '0'); // /r/6 も /r/06 も同じ武将に着地させる
   const origin = req.nextUrl.origin;
   const warrior = getById(id);

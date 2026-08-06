@@ -22,8 +22,9 @@ const NOTE_URLS: Record<string, string> = {
   '12': 'https://note.com/ty_jiritsu/n/n00a6adf00712', // 立花宗茂
 };
 
-export function GET(req: NextRequest, { params }: { params: { id: string } }) {
-  const raw = params.id ?? '';
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id: rawId } = await params;
+  const raw = rawId ?? '';
   const id = raw.padStart(2, '0');
   const origin = req.nextUrl.origin;
   const dest = NOTE_URLS[id];

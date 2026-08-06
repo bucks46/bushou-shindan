@@ -14,8 +14,9 @@ const WASHI = '#f4f1e8';
 const SUMI = '#1c1a17';
 const SHU = '#9b2d1f';
 
-export default async function Image({ params }: { params: { id: string } }) {
-  const warrior = getById(params.id);
+export default async function Image({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const warrior = getById(id);
   const typeName = warrior ? describe(warrior).typeName : '';
 
   // 元画像をそのままbase64埋め込みすると、画像によってSatori(next/og)側の処理が
