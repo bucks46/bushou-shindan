@@ -10,10 +10,11 @@ import RevealOverlay from '@/components/RevealOverlay';
 import ShareCard from '@/components/ShareCard';
 import CTABlock from '@/components/CTABlock';
 
-type Props = { params: { id: string } };
+type Props = { params: Promise<{ id: string }> };
 
-export function generateMetadata({ params }: Props): Metadata {
-  const w = getById(params.id);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const w = getById(id);
   if (!w) return { title: '武将診断' };
   return {
     title: `あなたは「${w.name}」型 | 武将診断`,
@@ -22,8 +23,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function Result({ params }: Props) {
-  const warrior = getById(params.id);
+export default async function Result({ params }: Props) {
+  const { id } = await params;
+  const warrior = getById(id);
   if (!warrior) notFound();
   const d = describe(warrior);
 
