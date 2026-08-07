@@ -5,7 +5,7 @@ import path from 'node:path';
 import { notFound } from 'next/navigation';
 import { getById } from '@/lib/appRoster.mjs';
 import { describe } from '@/lib/descriptions.mjs';
-import { ctaForAxis, PR_LABEL, SITE } from '@/lib/site.mjs';
+import { agarootCtaForWarrior, PR_LABEL, SITE } from '@/lib/site.mjs';
 import RevealOverlay from '@/components/RevealOverlay';
 import ShareCard from '@/components/ShareCard';
 import CTABlock from '@/components/CTABlock';
@@ -75,9 +75,9 @@ export default async function Result({ params }: Props) {
           </div>
         </section>
 
-        {/* 武将軸で選ばれた1CVを箇条書きで（策謀=アガルート／他=POSIWILL） */}
+        {/* 武将固有の資格マッチングで1CV（2026-08-07 全武将アガルート一本化） */}
         <div className="mb-3">
-          <CTABlock cta={ctaForAxis(warrior.mainAxis)} warriorId={warrior.id} />
+          <CTABlock cta={agarootCtaForWarrior(warrior.id)} warriorId={warrior.id} />
         </div>
 
         <p className="text-[10px] text-sumigray/70 font-mincho text-center mb-10">{PR_LABEL}</p>

@@ -17,10 +17,10 @@ export const dynamic = 'force-dynamic';
 // note3軸ローテーション設計（8/7収益導線レビュー）で恒久対応を決定予定。
 const FALLBACK_NOTE_URL = 'https://note.com/ty_jiritsu/n/n36a80132fae6';
 const NOTE_URLS: Record<string, string> = {
-  '01': FALLBACK_NOTE_URL, // 真田幸村
+  '01': 'https://note.com/ty_jiritsu/n/nd5dc23b4b990', // 真田幸村（2026-08-07 書き直し版に差し戻し完了）
   '02': FALLBACK_NOTE_URL, // 伊達政宗
   '03': FALLBACK_NOTE_URL, // 明智光秀
-  '04': FALLBACK_NOTE_URL, // 黒田官兵衛
+  '04': 'https://note.com/ty_jiritsu/n/n3adcf20c854a', // 黒田官兵衛（2026-08-07 書き直し版に差し戻し完了）
   '05': FALLBACK_NOTE_URL, // 織田信長
   '06': FALLBACK_NOTE_URL, // 徳川家康
   '07': FALLBACK_NOTE_URL, // 豊臣秀吉
