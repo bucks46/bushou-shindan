@@ -23,7 +23,7 @@ const NOTE_URLS: Record<string, string> = {
   '04': 'https://note.com/ty_jiritsu/n/n3adcf20c854a', // 黒田官兵衛（2026-08-07 書き直し版に差し戻し完了）
   '05': FALLBACK_NOTE_URL, // 織田信長
   '06': FALLBACK_NOTE_URL, // 徳川家康
-  '07': FALLBACK_NOTE_URL, // 豊臣秀吉
+  '07': 'https://note.com/ty_jiritsu/n/n82f5c6e53133', // 豊臣秀吉（2026-08-14 書き直し版に差し戻し完了）
   '11': 'https://note.com/ty_jiritsu/n/nd8e7ab8eceb7', // 本多忠勝（2026-08-06 書き直し版に差し戻し完了）
   '12': FALLBACK_NOTE_URL, // 立花宗茂
 };
