@@ -25,7 +25,7 @@ const NOTE_URLS: Record<string, string> = {
   '06': FALLBACK_NOTE_URL, // 徳川家康
   '07': 'https://note.com/ty_jiritsu/n/n82f5c6e53133', // 豊臣秀吉（2026-08-14 書き直し版に差し戻し完了）
   '11': 'https://note.com/ty_jiritsu/n/nd8e7ab8eceb7', // 本多忠勝（2026-08-06 書き直し版に差し戻し完了）
-  '12': FALLBACK_NOTE_URL, // 立花宗茂
+  '12': 'https://note.com/ty_jiritsu/n/nb647859440ad', // 立花宗茂（2026-08-18 書き直し版に差し戻し完了）
 };
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
