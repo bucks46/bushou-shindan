@@ -30,6 +30,7 @@ const NOTE_URLS: Record<string, string> = {
   // 2026-08-21判明：AI活用Tips系noteは直接note.comリンクで投稿してしまい計測不可だった穴を埋めるため追加。
   'tips01': 'https://note.com/ty_jiritsu/n/n61aad7b25b83', // AIに自己分析して丸投げしていませんか？（2026-08-21公開）
   'tips02': 'https://note.com/ty_jiritsu/n/nf064ae997b2a', // AIとの模擬面接、「面接官役をやって」だけで終わっていませんか？（2026-08-22公開）
+  'tips03': 'https://note.com/ty_jiritsu/n/n2fbd94a634f9', // 業界研究、AIに「教えて」で終わっていませんか？（2026-08-23公開）
 };
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
