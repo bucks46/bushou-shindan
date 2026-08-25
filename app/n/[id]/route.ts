@@ -19,7 +19,7 @@ const FALLBACK_NOTE_URL = 'https://note.com/ty_jiritsu/n/n36a80132fae6';
 const NOTE_URLS: Record<string, string> = {
   '01': 'https://note.com/ty_jiritsu/n/nd5dc23b4b990', // 真田幸村（2026-08-07 書き直し版に差し戻し完了）
   '02': 'https://note.com/ty_jiritsu/n/nb2bc5a312b22', // 伊達政宗（2026-08-21 書き直し版に差し戻し完了・現代人物並行事例+図解入り）
-  '03': FALLBACK_NOTE_URL, // 明智光秀
+  '03': 'https://note.com/ty_jiritsu/n/nacf898e91fa1', // 明智光秀（2026-08-25 書き直し版に差し戻し完了・現代人物並行事例+図解入り）
   '04': 'https://note.com/ty_jiritsu/n/n3adcf20c854a', // 黒田官兵衛（2026-08-07 書き直し版に差し戻し完了）
   '05': FALLBACK_NOTE_URL, // 織田信長
   '06': FALLBACK_NOTE_URL, // 徳川家康
