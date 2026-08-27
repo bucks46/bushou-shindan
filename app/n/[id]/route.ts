@@ -34,6 +34,7 @@ const NOTE_URLS: Record<string, string> = {
   'tips04': 'https://note.com/ty_jiritsu/n/nf32fe94db1a7', // 退職理由、本音をそのまま話して大丈夫だと思っていませんか？（2026-08-24公開）
   'tips05': 'https://note.com/ty_jiritsu/n/n0339fe975c2a', // 志望動機、AIに書かせたらバレますか？（2026-08-25公開）
   'tips06': 'https://note.com/ty_jiritsu/n/n1380805eb556', // 複数の内定、何を比べればいいか迷っていませんか？（2026-08-26公開）
+  'tips07': 'https://note.com/ty_jiritsu/n/n31070221c15a', // 面接の「何か質問はありますか？」、毎回困っていませんか？（2026-08-27公開）
 };
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
