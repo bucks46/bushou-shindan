@@ -36,6 +36,7 @@ const NOTE_URLS: Record<string, string> = {
   'tips06': 'https://note.com/ty_jiritsu/n/n1380805eb556', // 複数の内定、何を比べればいいか迷っていませんか？（2026-08-26公開）
   'tips07': 'https://note.com/ty_jiritsu/n/n31070221c15a', // 面接の「何か質問はありますか？」、毎回困っていませんか？（2026-08-27公開）
   'tips08': 'https://note.com/ty_jiritsu/n/n4ec4f567a05b', // 転職で年収は上がる、は本当に全世代に当てはまりますか？（2026-08-28公開）
+  'tips09': 'https://note.com/ty_jiritsu/n/na0fbd9b93f6b', // 内定後の給与交渉、言い方を間違えると心証を損ねると思っていませんか？（2026-08-29公開）
 };
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
