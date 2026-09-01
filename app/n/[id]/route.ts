@@ -38,6 +38,7 @@ const NOTE_URLS: Record<string, string> = {
   'tips08': 'https://note.com/ty_jiritsu/n/n4ec4f567a05b', // 転職で年収は上がる、は本当に全世代に当てはまりますか？（2026-08-28公開）
   'tips09': 'https://note.com/ty_jiritsu/n/na0fbd9b93f6b', // 内定後の給与交渉、言い方を間違えると心証を損ねると思っていませんか？（2026-08-29公開）
   'tips10': 'https://note.com/ty_jiritsu/n/nbfbe88a03909', // 退職前の有給消化、切り出し方で気まずくなると思っていませんか？（2026-08-30公開）
+  'tips11': 'https://note.com/ty_jiritsu/n/nc70e25abd263', // 職務経歴書、実績が数字で書けないと不利だと思っていませんか？（2026-09-01公開）
 };
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
