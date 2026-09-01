@@ -22,7 +22,7 @@ const NOTE_URLS: Record<string, string> = {
   '03': 'https://note.com/ty_jiritsu/n/nacf898e91fa1', // 明智光秀（2026-08-25 書き直し版に差し戻し完了・現代人物並行事例+図解入り）
   '04': 'https://note.com/ty_jiritsu/n/n3adcf20c854a', // 黒田官兵衛（2026-08-07 書き直し版に差し戻し完了）
   '05': 'https://note.com/ty_jiritsu/n/ne1131b2ce7ce', // 織田信長（2026-08-28 書き直し版で新規個別URL化・現代事例+図解入り）
-  '06': FALLBACK_NOTE_URL, // 徳川家康
+  '06': 'https://note.com/ty_jiritsu/n/nde754dd11875', // 徳川家康（2026-09-01 書き直し版で新規個別URL化・現代事例+図解入り）
   '07': 'https://note.com/ty_jiritsu/n/n82f5c6e53133', // 豊臣秀吉（2026-08-14 書き直し版に差し戻し完了）
   '11': 'https://note.com/ty_jiritsu/n/nd8e7ab8eceb7', // 本多忠勝（2026-08-06 書き直し版に差し戻し完了）
   '12': 'https://note.com/ty_jiritsu/n/nb647859440ad', // 立花宗茂（2026-08-18 書き直し版に差し戻し完了）
