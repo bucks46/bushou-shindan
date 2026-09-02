@@ -39,6 +39,7 @@ const NOTE_URLS: Record<string, string> = {
   'tips09': 'https://note.com/ty_jiritsu/n/na0fbd9b93f6b', // 内定後の給与交渉、言い方を間違えると心証を損ねると思っていませんか？（2026-08-29公開）
   'tips10': 'https://note.com/ty_jiritsu/n/nbfbe88a03909', // 退職前の有給消化、切り出し方で気まずくなると思っていませんか？（2026-08-30公開）
   'tips11': 'https://note.com/ty_jiritsu/n/nc70e25abd263', // 職務経歴書、実績が数字で書けないと不利だと思っていませんか？（2026-09-01公開）
+  'tips12': 'https://note.com/ty_jiritsu/n/n60f79ddb18a1', // 他社の選考状況、前回と話が変わって"バレる"のが不安になっていませんか？（2026-09-02公開）
 };
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
