@@ -42,6 +42,7 @@ const NOTE_URLS: Record<string, string> = {
   'tips12': 'https://note.com/ty_jiritsu/n/n60f79ddb18a1', // 他社の選考状況、前回と話が変わって"バレる"のが不安になっていませんか？（2026-09-02公開）
   'tips13': 'https://note.com/ty_jiritsu/n/nb5c49d0a70e0', // AIにUIを作らせると、"AIっぽいダサさ"になると感じたことはありませんか？（2026-09-02公開・AI活用術シリーズ新設・CTAはアガルートAI人材コース&id1=ai_jinzai）
   'tips14': 'https://note.com/ty_jiritsu/n/n319ac1b1b3d2', // 見積もり作成、毎回ゼロから書き直していませんか？（2026-09-03公開・AI活用術シリーズ）
+  'tips15': 'https://note.com/ty_jiritsu/n/ncf0d1522a146', // 業務委託契約書、この条項って普通ですか？と一人で悩んでいませんか？（2026-09-04公開・AI活用術シリーズ）
 };
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
