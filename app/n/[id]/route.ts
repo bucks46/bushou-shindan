@@ -46,6 +46,7 @@ const NOTE_URLS: Record<string, string> = {
   'tips16': 'https://note.com/ty_jiritsu/n/nb4c0c6b6a917', // ポートフォリオ、AIで作った成果物をそのまま載せていませんか？（2026-09-05公開・AI活用術シリーズ）
   'tips17': 'https://note.com/ty_jiritsu/n/n3460aa84e1f6', // 支払い催促のメール、下手に出すぎて"舐められてる"感じになっていませんか？（2026-09-06公開・AI活用術シリーズ）
   'tips18': 'https://note.com/ty_jiritsu/n/n70f3f2a98d8e', // 修正依頼、"1回にまとめて"と言えずに何度も往復していませんか？（2026-09-07公開・AI活用術シリーズ）
+  'tips19': 'https://note.com/ty_jiritsu/n/n40eb2b85526f', // 見積もり金額、自分から言えずに"いくらなら出せますか？"と聞き返していませんか？（2026-09-08公開・AI活用術シリーズ）
 };
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
