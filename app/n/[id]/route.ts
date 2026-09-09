@@ -49,6 +49,7 @@ const NOTE_URLS: Record<string, string> = {
   'tips19': 'https://note.com/ty_jiritsu/n/n40eb2b85526f', // 見積もり金額、自分から言えずに"いくらなら出せますか？"と聞き返していませんか？（2026-09-08公開・AI活用術シリーズ）
   'tips20': 'https://note.com/ty_jiritsu/n/n64ad3c49b122', // 納期が遅れそうなとき、"頑張れば間に合うかも"で報告を先延ばしにしていませんか？（2026-09-09公開・AI活用術シリーズ）
   'premium01': 'https://note.com/ty_jiritsu/n/nf4d82fd77438', // フリーランスの"言いにくいこと"、全部まとめてAIと乗り越えるプロンプト集（2026-09-09公開・note初の有料記事、¥300・tips13-20の圧縮版+新規プロンプト3本+汎用テンプレート）
+  'premium02': 'https://note.com/ty_jiritsu/n/n8cd0dcdda0ef', // 同じようなキャリアなのに、エージェントの本気度が全然違った2人の話（2026-09-09公開・有料記事第2弾、¥500-800想定、元エージェント内部視点+実践的な伝え方+壁打ちプロンプト）
 };
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
