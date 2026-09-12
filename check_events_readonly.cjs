@@ -28,7 +28,12 @@ async function main() {
   // Chrome/48.0.2564.116(2016年当時の旧バージョンUAを使い回すbotファーム、
   // 111.225.x.x/119.249.x.x帯の複数IPから3-4秒間隔でtips全IDを機械的に巡回する
   // パターンを確認、実在の個人がこの古いChromeを使う可能性は無視できるほど低い)を追加。
-  const botPatterns = ['curl', 'Twitterbot', 'trendictionbot', 'Googlebot', 'bingbot', 'Slackbot', 'facebookexternalhit', 'Claude/', 'Baiduspider', 'Chrome/48.0.2564.116'];
+  // 2026-09-13追加：python-requests(明示的なスクリプトUA)と、
+  // "Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0"を
+  // 65.21.136.254/46.232.249.132/198.54.130.28/23.168.24.20等、全く異なる複数IPから
+  // 一字一句同一のUA文字列で5回以上検出(8/23-9/11)。実在の個人が同一Firefoxバージョンで
+  // 複数の海外ホスティングIPから来る確率は極めて低く、bot/クローラーファームと判断(確信度：中)。
+  const botPatterns = ['curl', 'Twitterbot', 'trendictionbot', 'Googlebot', 'bingbot', 'Slackbot', 'facebookexternalhit', 'Claude/', 'Baiduspider', 'Chrome/48.0.2564.116', 'python-requests', 'rv:148.0) Gecko/20100101 Firefox/148.0'];
   for (const l of lines) {
     let parsed;
     try { parsed = JSON.parse(l); } catch { continue; }
