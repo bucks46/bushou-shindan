@@ -17,7 +17,7 @@ export const dynamic = 'force-dynamic';
 // note3軸ローテーション設計（8/7収益導線レビュー）で恒久対応を決定予定。
 const FALLBACK_NOTE_URL = 'https://note.com/ty_jiritsu/n/n36a80132fae6';
 const NOTE_URLS: Record<string, string> = {
-  '01': 'https://note.com/ty_jiritsu/n/nd5dc23b4b990', // 真田幸村（2026-08-07 書き直し版に差し戻し完了）
+  '01': 'https://note.com/ty_jiritsu/n/ne52078a0ae0c', // 真田幸村（2026-09-15 現代事例+図解版に差し替え・スティーブ・ジョブズ「待つ"と"構想し続ける"は別」）
   '02': 'https://note.com/ty_jiritsu/n/nb2bc5a312b22', // 伊達政宗（2026-08-21 書き直し版に差し戻し完了・現代人物並行事例+図解入り）
   '03': 'https://note.com/ty_jiritsu/n/nacf898e91fa1', // 明智光秀（2026-08-25 書き直し版に差し戻し完了・現代人物並行事例+図解入り）
   '04': 'https://note.com/ty_jiritsu/n/n7a06026200f6', // 黒田官兵衛（2026-09-08 現代事例+図解版に差し替え・山崎武司「居場所と力は別」）
