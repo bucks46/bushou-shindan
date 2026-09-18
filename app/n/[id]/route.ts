@@ -57,6 +57,7 @@ const NOTE_URLS: Record<string, string> = {
   'tips26': 'https://note.com/ty_jiritsu/n/n6fd57784fcfa', // 納品したイラストやデザイン、契約した用途以外にも使われていませんか？（2026-09-15公開・AI活用術シリーズ）
   'tips27': 'https://note.com/ty_jiritsu/n/n18a5087617e5', // 他の仕事を断って準備していたのに、始まる直前に契約を解除されていませんか？（2026-09-16公開・AI活用術シリーズ）
   'tips28': 'https://note.com/ty_jiritsu/n/n825a8918ff2f', // 業務委託なのに、出社時間や休みまで指定されていませんか？（2026-09-17公開・AI活用術シリーズ）
+  'tips29': 'https://note.com/ty_jiritsu/n/n395abefd6b2f', // 土日や深夜の連絡にも即対応、が当たり前になっていませんか？（2026-09-18公開・AI活用術シリーズ）
   'premium01': 'https://note.com/ty_jiritsu/n/nf4d82fd77438', // フリーランスの"言いにくいこと"、全部まとめてAIと乗り越えるプロンプト集（2026-09-09公開・note初の有料記事、¥300・tips13-20の圧縮版+新規プロンプト3本+汎用テンプレート）
   'premium02': 'https://note.com/ty_jiritsu/n/n8cd0dcdda0ef', // 同じようなキャリアなのに、エージェントの本気度が全然違った2人の話（2026-09-09公開・有料記事第2弾、¥500-800想定、元エージェント内部視点+実践的な伝え方+壁打ちプロンプト）
 };
