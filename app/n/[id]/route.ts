@@ -27,6 +27,7 @@ const NOTE_URLS: Record<string, string> = {
   '11': 'https://note.com/ty_jiritsu/n/n94470988afc9', // 本多忠勝（2026-09-04 現代事例+図解入り版に差し替え・バフェット「能力の輪」）
   '12': 'https://note.com/ty_jiritsu/n/nb647859440ad', // 立花宗茂（2026-08-18 書き直し版に差し戻し完了）
   '19': 'https://note.com/ty_jiritsu/n/ne145a8d8626d', // 山中鹿介（2026-09-11 新規公開・現代事例+図解入り・ホンダF1参戦「あえて困難を選ぶ」型）
+  '15': 'https://note.com/ty_jiritsu/n/nedd85fe2aea6', // 小早川隆景（2026-09-18 新規公開・現代事例+図解入り・松下電器「山下俊彦抜擢」慣例を手放す型）
   // 非武将コンテンツ(武将診断のwarriors.jsonに存在しないid)。
   // 2026-08-21判明：AI活用Tips系noteは直接note.comリンクで投稿してしまい計測不可だった穴を埋めるため追加。
   'tips01': 'https://note.com/ty_jiritsu/n/n61aad7b25b83', // AIに自己分析して丸投げしていませんか？（2026-08-21公開）
